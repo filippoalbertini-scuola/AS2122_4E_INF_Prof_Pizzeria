@@ -22,10 +22,16 @@ namespace AS2122_4E_INF_Prof_Pizzeria
 
                 case "VERDURE":
                     lstVisualizza.Items.Add("VERDURE (" + txtQuantita.Text + ")");
+                    nPizze = Convert.ToInt32(lblVerdura.Text);
+
+                    lblVerdura.Text = Convert.ToString(nPizze + Convert.ToInt32(txtQuantita.Text));
                     break;
 
                 case "4 STAGIONI":
                     lstVisualizza.Items.Add("4STAGIONI (" + txtQuantita.Text + ")");
+                    nPizze = Convert.ToInt32(lbl4Stagioni.Text);
+
+                    lbl4Stagioni.Text = Convert.ToString(nPizze + Convert.ToInt32(txtQuantita.Text));
                     break;
             }
         }
