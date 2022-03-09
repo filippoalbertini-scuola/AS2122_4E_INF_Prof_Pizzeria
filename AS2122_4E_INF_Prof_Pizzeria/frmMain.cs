@@ -9,11 +9,15 @@ namespace AS2122_4E_INF_Prof_Pizzeria
 
         private void btnAggiungi_Click(object sender, EventArgs e)
         {
+            int nPizze;
 
             switch (cmbTipoPizza.Text)
             {
                 case "MARGHERITA":
                     lstVisualizza.Items.Add("MARGHERITA (" + txtQuantita.Text +")");
+                    nPizze = Convert.ToInt32(lblMargherita.Text);
+
+                    lblMargherita.Text = Convert.ToString(nPizze + Convert.ToInt32(txtQuantita.Text));
                     break;
 
                 case "VERDURE":
